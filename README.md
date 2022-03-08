@@ -7,29 +7,30 @@ https://www.nayuki.io/page/random-password-generator-javascript
 ## Usage
 ```
 var PG = new PassGen({
-  outputCallback: function(password){
-    ...do something with password...
-  }
+outputCallback: function(password){
+...do something with password...
+}
 });
 
 PG.generate();
 ```
-
 ## Options
+
 <table>
   <thead>
-  <tr>
-    <th>Option</th>
-    <th>Description</th>
-    <th>Default Value</th>
-  </tr>
+    <tr>
+      <th>Option</th>
+      <th>Description</th>
+      <th>Default Value</th>
+    </tr>
   </thead>
   <tbody>
-  <tr>
-    <td>charSets (array)</td>
-    <td>Character sets to use in generation. Possible values: <code>["lowercase","uppercase","numbers","symbols","space"]</code></td>
-    <td><code>["lowercase","uppercase","numbers","symbols"]</code></td>
-  </tr>
+    <tr>
+      <td>charSets (array)</td>
+      <td>Character sets to use in generation. Possible values:
+        <code>["lowercase","uppercase","numbers","symbols","space"]</code></td>
+      <td><code>["lowercase","uppercase","numbers","symbols"]</code></td>
+    </tr>
     <tr>
       <td>length (int)</td>
       <td>Length of password to be generated. Only used when <code>lengthMethod = length</code></td>
@@ -41,7 +42,8 @@ PG.generate();
     </tr>
     <tr>
       <td>entropy (int)</td>
-      <td>Size of entropy to be used to generate password (expressed in bits). Only used when <code>lengthMethod = entropy</code></td>
+      <td>Size of entropy to be used to generate password (expressed in bits). Only used when <code>lengthMethod =
+          entropy</code></td>
       <td><code>128</code>
     </tr>
     <tr>
@@ -49,9 +51,10 @@ PG.generate();
       <td>Function called for handling errors. If, null, uses <code>alert()</code>. Passes: <code>message</code></td>
       <td><code>null</code></td>
     </tr>
-     <tr>
+    <tr>
       <td>outputCallback (function)</td>
-      <td>Function called for handling password output. If, null, uses <code>alert()</code>. Passes: <code>password, stats</code></td>
+      <td>Function called for handling password output. If, null, uses <code>alert()</code>. Passes: <code>password,
+          stats</code></td>
       <td><code>null</code></td>
     </tr>
     <tr>
@@ -59,22 +62,22 @@ PG.generate();
       <td>Function called after <code>copy()</code> method is called. Passes: <code>this</code></td>
       <td><code>null</code></td>
     </tr>
-     <tr>
+    <tr>
       <td>debugConsole (boolean)</td>
       <td>If true, password, errors and stats are printed to the console log.</td>
       <td><code>false</code></td>
     </tr>
   </tbody>
-  </table>
-  
+</table>
+
 ## Methods
 
 <table>
   <thead>
-  <tr>
-    <th>Method</th>
-    <th>Description</th>
-  </tr>
+    <tr>
+      <th>Method</th>
+      <th>Description</th>
+    </tr>
   </thead>
   <tbody>
     <tr>
