@@ -4,6 +4,10 @@ A pure vanilla JavaScript class for generating strong passwords
 Originally developed by: Nayuki:
 https://www.nayuki.io/page/random-password-generator-javascript
 
+## Installation
+
+<code>npm install @designly/passgen</code>
+
 ## Usage
 ```
 var PG = new PassGen({
