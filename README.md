@@ -63,12 +63,6 @@ PG.generate();
           stats</code></td>
       <td><code>null</code></td>
     </tr>
-    <tr>
-      <td>copyPasswordCallback (function)</td>
-      <td>Function called after <code>copy()</code> method is called. Passes: <code>this</code></td>
-      <td><code>null</code></td>
-    </tr>
-    <tr>
       <td>debugConsole (boolean)</td>
       <td>If true, password, errors and stats are printed to the console log.</td>
       <td><code>false</code></td>
@@ -91,8 +85,8 @@ PG.generate();
       <td>Executes the generation of the password. Calls <code>outputCallback(password, stats)</code> on success.
     </tr>
     <tr>
-      <td><code>copy()</code></td>
-      <td>Copies generated password to clipboard. Calls <code>copyPasswordCallback(this)</code> on success.
+      <td><code>copy(callback)</code></td>
+      <td>Copies generated password to clipboard. Calls <code>callback(this.currentPassword)</code> on success.
     </tr>
   </tbody>
 </table>
