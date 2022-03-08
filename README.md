@@ -6,7 +6,9 @@ https://www.nayuki.io/page/random-password-generator-javascript
 
 ## Installation
 
-<code>npm install @designly/passgen</code>
+```
+npm install @designly/passgen
+```
 
 ## Usage
 ```
