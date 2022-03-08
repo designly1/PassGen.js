@@ -31,7 +31,6 @@ var PassGen = class PassGen {
             "entropy": 128,
             "errorCallback": null,
             "outputCallback": null,
-            "copyPasswordCallback": null,
             "debugConsole": false
         };
 
@@ -211,7 +210,7 @@ var PassGen = class PassGen {
     }
 
     // Copies password to clipboard
-    copy() {
+    copy(callback) {
         if ("clipboard" in navigator)
             navigator.clipboard.writeText(this.currentPassword);
         else {
@@ -228,8 +227,8 @@ var PassGen = class PassGen {
         }
 
         // Copy password callback (e.g. to notify password has been copied)
-        if (typeof this.copyPasswordCallback == 'function') {
-            this.copyPasswordCallback(this);
+        if (typeof callback == 'function') {
+            callback(this.currentPassword);
         }
     }
 }
